@@ -1,51 +1,55 @@
+import Image from "next/image";
+import logoPacklin from "./logoPacklin.jpg";
+
 const stats = [
-  { value: "+45", label: "Años de trayectoria" },
-  { value: "+5000", label: "Piezas fabricadas" },
-  { value: "18", label: "Sectores atendidos" },
-  { value: "100%", label: "Personalización" },
+  { value: "20", label: "Años en la industria" },
+  { value: "27", label: "Empresas activas" },
+  { value: "9", label: "Personas en el equipo" },
+  { value: "~1 sem.", label: "Plazo de entrega estándar" },
 ];
 
 const services = [
-  {
-    title: "Forjado",
-    text: "Producción de piezas ferrosas con resistencia y durabilidad para aplicaciones industriales exigentes.",
-  },
-  {
-    title: "Estampado",
-    text: "Procesos optimizados para piezas de alta repetición y precisión dimensional.",
-  },
-  {
-    title: "Mecanizado",
-    text: "Acabado y ajustes finos para piezas terminadas con alta exigencia técnica.",
-  },
+  { title: "Matriz exclusiva por cliente", text: "Cada cliente tiene su propia matriz. No hay producción genérica ni moldes compartidos." },
+  { title: "Red productiva propia", text: "20 años de vínculos con matriceros y proveedores de materia prima, listos cuando se necesitan." },
+  { title: "Flexibilidad de materia prima", text: "Si preferís proveer vos mismo el latón, te lo facilitamos. La calidad queda garantizada desde el origen." },
+  { title: "Capacidad de respuesta", text: "Producción sostenida incluso en contextos críticos: pandemia, subas o escasez de materia prima." },
 ];
 
 const sectors = [
-  "Petrolera",
-  "Agrícola",
-  "Automotriz",
-  "Transporte",
+  "Válvulas y reguladores",
+  "GNC",
+  "Matafuegos",
+  "Bombas",
+  "Cerrajería",
+  "Sanitarios",
+];
+
+const history = [
+  ["2006 - Fundación", "José Luis Ramírez inicia Packlin S.A."],
+  ["De inquilinos a dueños", "Pasar a ser propietarios del galpón donde operamos."],
+  ["Pandemia 2020", "Parte de la cadena de oxigenoterapia cuando el circuito habitual no daba respuesta."],
+  ["Hoy", "20 años de trayectoria, 27 empresas activas y un equipo de 9 personas."],
+];
+
+const clients = [
+  ["Acytra S.A.I.C.", "https://acytra.com/"], ["8 Bloq", "https://www.8bloq.com.ar/"],
+  ["Casa Jarse", "https://casajarse.com/"], ["DAS Tecnología", "https://dastecnologiasrl.com/"],
+  ["Emerald S.A.", "https://www.emeraldargentina.com.ar/"], ["E.Q.A. S.A.I.C.", "https://eqa.com.ar/"],
+  ["GNC - Macro", "https://macrogas.vercel.app/"], ["Incen Sanit S.A.", "https://www.incen-sanit.com.ar/"],
+  ["Interlaken", "https://www.interlaken.com.ar/"], ["Industrias EPTA", "https://epta.com.ar/"],
+  ["Klinger S.A.", "https://klinger.com.ar/"], ["Lacar Incendios", "https://www.lacarincendio.com.ar/"],
+  ["Metalúrgica ATK", "https://atk.com.ar/"], ["Rowa S.A.", "https://bombasrowa.com/"],
+  ["Rebron S.R.L.", "https://rebron.com.ar/"], ["Gaspetro", "https://www.gaspetro.com.ar/"],
+  ["Vaportec", "https://vaportec.com.ar/"], ["Vanguard Lock", "https://www.vanguardlock.com/"],
+  ["Yaltres S.R.L.", "https://www.yaltres.com/"], ["Grupo Tornado S.A.", "https://intor.com.ar/"],
+  ["Herrajes Galo", "https://www.herrajesgalo.com.ar/"], ["Alcarduplex S.A.", "https://alcarduplex.com/"],
+  ["Metal Mec del Oeste", "https://metalmecdeloeste.com.ar/"], ["Talleres Paz", "https://www.tallerespaz.com.ar/"],
+  ["Varela Peric S.A.", "https://www.instagram.com/varelaperic/"], ["Garcia Conde", ""], ["Paul", ""],
 ];
 
 const products = [
-  {
-    title: "Punta de eje",
-    category: "Sector automotriz",
-    image:
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Conjunto de enganche",
-    category: "Transporte",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80",
-  },
-  {
-    title: "Gancho de tracción",
-    category: "Agroindustria",
-    image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80",
-  },
+  "Válvulas de latón", "Cámaras de agua y gas", "Pestillos y codos",
+  "Nueces, tuercas y robinetes", "Piezas cónicas", "Discos a medida", "Media unión",
 ];
 
 export default function Home() {
@@ -54,20 +58,20 @@ export default function Home() {
       <header className="site-header">
         <div className="container nav-wrap">
           <a href="#inicio" className="brand" aria-label="Ir al inicio">
-            <span className="brand-mark">MI</span>
-            <span className="brand-text">Metal Industrial</span>
+            <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} priority />
+            <span className="brand-text">Packlin</span>
           </a>
 
           <nav className="main-nav" aria-label="Navegación principal">
-            <a href="#empresa">Empresa</a>
-            <a href="#servicios">Servicios</a>
+            <a href="#empresa">Nosotros</a>
+            <a href="#proceso">Cómo trabajamos</a>
             <a href="#productos">Productos</a>
-            <a href="#sectores">Sectores</a>
+            <a href="#clientes">Clientes</a>
             <a href="#contacto">Contacto</a>
           </nav>
 
           <a className="btn btn-primary" href="#contacto">
-            Consultar
+            Solicitar cotización
           </a>
         </div>
       </header>
@@ -75,27 +79,27 @@ export default function Home() {
       <section id="inicio" className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Más de 40 años de experiencia</p>
-            <h1>Soluciones industriales en piezas metálicas para cada sector.</h1>
+            <p className="eyebrow">Forjado y fundición de piezas de latón · Desde 2006</p>
+            <h1>Precisión industrial, con trato de empresa familiar.</h1>
             <p className="lead">
-              Fabricamos piezas forjadas, estampadas y mecanizadas con calidad,
-              precisión y capacidad de producción para industrias automotriz,
-              agro, transporte y petrolera.
+              Fabricamos piezas de latón a medida para empresas industriales argentinas,
+              con matrices exclusivas por cliente, control de calidad en cada etapa y
+              entregas en aproximadamente una semana.
             </p>
 
             <div className="cta-row">
               <a className="btn btn-primary" href="#contacto">
-                Solicitar presupuesto
+                Solicitar cotización
               </a>
               <a className="btn btn-secondary" href="#productos">
-                Ver productos
+                Ver qué fabricamos
               </a>
             </div>
 
             <ul className="hero-badges" aria-label="Atributos clave">
-              <li>Producción a medida</li>
-              <li>Control de calidad</li>
-              <li>Atención comercial ágil</li>
+              <li>Matriz exclusiva por cliente</li>
+              <li>Transporte propio</li>
+              <li>Atención directa de los dueños</li>
             </ul>
           </div>
 
@@ -105,8 +109,8 @@ export default function Home() {
               alt="Operarios y maquinaria en planta industrial de fabricación metálica"
             />
             <div className="hero-card">
-              <strong>3500 m² cubiertos</strong>
-              <span>Planta con capacidad productiva para grandes volúmenes.</span>
+              <strong>Packlin en números</strong>
+              <span>Una empresa familiar con oficio de planta y continuidad probada.</span>
             </div>
           </div>
         </div>
@@ -123,36 +127,58 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="trustbar">
+        <div className="container trustbar-grid">
+          <span>Matriz exclusiva por cliente</span>
+          <span>Transporte propio, sin tercerizar</span>
+          <span>Atención directa de los dueños</span>
+          <span>Continuidad probada en contextos críticos</span>
+        </div>
+      </div>
+
       <section id="empresa" className="section intro">
         <div className="container two-col">
           <div>
             <p className="eyebrow dark">Quiénes somos</p>
-            <h2>Empresa con experiencia sólida en forjado y mecanizado de precisión.</h2>
+            <h2>Una empresa familiar con oficio de planta.</h2>
           </div>
           <div>
             <p>
-              Somos una empresa industrial argentina dedicada a la fabricación de
-              piezas ferrosas y piezas terminadas para distintas industrias.
-              Trabajamos con procesos de forjado, estampado, mecanizado y
-              soluciones a medida adaptadas a cada necesidad del cliente.
+              Packlin nace en 2006, fundada por José Luis Ramírez. Hoy somos nueve
+              personas -siete en planta y dos en administración- y las decisiones
+              siguen tomándolas quienes atienden cada pedido.
             </p>
             <p>
-              Nuestra misión es brindar productos confiables, tiempos de respuesta
-              eficientes y una relación comercial clara con foco en la calidad, la
-              precisión y la continuidad.
+              Esa cercanía es también nuestra forma de trabajar: seguimos invirtiendo
+              para mejorar y sostenernos en el mercado, con la meta de que la empresa
+              continúe con las próximas generaciones.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="servicios" className="section section-alt">
+      <section className="section section-alt">
+        <div className="container two-col">
+          <div>
+            <p className="eyebrow">Nuestra historia</p>
+            <h2>Una trayectoria construida con trabajo y continuidad.</h2>
+          </div>
+          <div className="history-list">
+            {history.map(([title, text]) => (
+              <article key={title}><strong>{title}</strong><p>{text}</p></article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-alt">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Servicios</p>
-            <h2>Capacidades técnicas para producción industrial.</h2>
+            <p className="eyebrow">Por qué trabajar con Packlin</p>
+            <h2>Cuatro razones que dan tranquilidad.</h2>
           </div>
 
-          <div className="cards-grid three-grid">
+          <div className="cards-grid four-grid">
             {services.map((service) => (
               <article key={service.title} className="card feature-card">
                 <div className="icon">{service.title.charAt(0)}</div>
@@ -164,21 +190,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="sectores" className="section">
+      <section className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Sectores</p>
-            <h2>Atención especializada por industria.</h2>
+            <p className="eyebrow">Cómo trabajamos</p>
+            <h2>Un proceso de planta, con control en cada etapa.</h2>
           </div>
 
           <div className="cards-grid four-grid">
             {sectors.map((sector) => (
               <article key={sector} className="card sector-card">
                 <h3>{sector}</h3>
-                <p>
-                  Soluciones diseñadas para condiciones reales de trabajo,
-                  exigencia técnica y continuidad operativa.
-                </p>
+                <p>Fabricación a medida con control directo en cada pedido.</p>
               </article>
             ))}
           </div>
@@ -188,55 +211,47 @@ export default function Home() {
       <section id="productos" className="section section-alt">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Productos destacados</p>
-            <h2>Piezas fabricadas para aplicaciones reales.</h2>
+            <p className="eyebrow">Qué fabricamos</p>
+            <h2>Piezas de latón a medida.</h2>
           </div>
 
-          <div className="product-grid">
-            {products.map((product) => (
-              <article key={product.title} className="product-card">
-                <img src={product.image} alt={product.title} />
-                <div className="product-body">
-                  <span className="tag">{product.category}</span>
-                  <h3>{product.title}</h3>
-                  <p>
-                    Fabricación reforzada para uso en componentes críticos y
-                    procesos de alta demanda.
-                  </p>
-                </div>
-              </article>
-            ))}
+          <div className="product-list">
+            {products.map((product) => <span key={product} className="tag">{product}</span>)}
+          </div>
+          <div className="callout">
+            <strong>Estamos ampliando nuestra cartera.</strong>
+            <p>Sumamos empresas de climatización y nos reencontramos con clientes de siempre. Si trabajás en el rubro, conversemos.</p>
           </div>
         </div>
       </section>
 
-      <section className="section process">
+      <section id="proceso" className="section process">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Proceso</p>
-            <h2>Cómo trabajamos con cada cliente.</h2>
+            <p className="eyebrow">Proceso de trabajo</p>
+            <h2>Un proceso de planta, con control en cada etapa.</h2>
           </div>
 
           <div className="timeline">
             <article>
               <span>01</span>
-              <h3>Consulta</h3>
-              <p>Analizamos necesidad, materiales, tolerancias y volumen.</p>
+              <h3>Consulta técnica</h3>
+              <p>Recibimos la especificación: pieza, medida y cantidad.</p>
             </article>
             <article>
               <span>02</span>
-              <h3>Diseño</h3>
-              <p>Definimos especificaciones técnicas y alternativas de fabricación.</p>
+              <h3>Fundición o forjado</h3>
+              <p>Lingote 60/40 o barra/perfil, según la pieza.</p>
             </article>
             <article>
               <span>03</span>
-              <h3>Producción</h3>
-              <p>Controlamos procesos con trazabilidad y cumplimiento de calidad.</p>
+              <h3>Terminación y control</h3>
+              <p>Granallado, rotofinish y control de calidad por lote.</p>
             </article>
             <article>
               <span>04</span>
               <h3>Entrega</h3>
-              <p>Garantizamos tiempos de entrega y comunicación durante todo el proceso.</p>
+              <p>Con transporte propio, en aproximadamente una semana.</p>
             </article>
           </div>
         </div>
@@ -245,88 +260,91 @@ export default function Home() {
       <section className="cta-banner">
         <div className="container cta-inner">
           <div>
-            <p className="eyebrow dark">Necesitás una solución a medida</p>
-            <h2>Hablemos de tu proyecto.</h2>
+            <p className="eyebrow dark">Clientes</p>
+            <h2>27 empresas industriales trabajan hoy con nosotros.</h2>
           </div>
           <a className="btn btn-primary" href="#contacto">
-            Solicitar presupuesto
+            Conocer clientes
           </a>
         </div>
       </section>
 
-      <section className="section faq-section" aria-labelledby="faq-title">
+      <section id="clientes" className="section faq-section" aria-labelledby="faq-title">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">FAQ</p>
-            <h2 id="faq-title">Preguntas frecuentes.</h2>
+            <p className="eyebrow">Quiénes confían en Packlin</p>
+            <h2 id="faq-title">La mayoría llegó por recomendación.</h2>
           </div>
 
-          <div className="faq-list">
-            <details open>
-              <summary>¿Fabrican piezas según requerimientos específicos?</summary>
-              <p>
-                Sí. Podemos trabajar con especificaciones técnicas, planos,
-                materiales y volúmenes personalizados.
-              </p>
-            </details>
-            <details>
-              <summary>¿Atenden distintos sectores industriales?</summary>
-              <p>
-                Atendemos principalmente automotriz, transporte, agro, petrolero
-                y otros sectores con necesidad industrial.
-              </p>
-            </details>
-            <details>
-              <summary>¿Pueden asesorar en diseño o mejora de piezas?</summary>
-              <p>
-                Ofrecemos orientación técnica para evaluar viabilidad de
-                producción, material y proceso de fabricación.
-              </p>
-            </details>
+          <div className="clients-grid">
+            {clients.map(([name, url]) => url ? <a key={name} href={url} target="_blank" rel="noopener noreferrer">{name}</a> : <span key={name}>{name}</span>)}
           </div>
         </div>
       </section>
 
-      <footer id="contacto" className="site-footer">
+      <section id="contacto" className="section quote-section" aria-labelledby="quote-title">
+        <div className="container quote-layout">
+          <div>
+            <p className="eyebrow">Cotización</p>
+            <h2 id="quote-title">Conversemos sobre tu próximo pedido.</h2>
+            <p>Contanos qué pieza necesitás, en qué cantidad y para cuándo. Te respondemos con una cotización clara, sin vueltas.</p>
+            <p className="quote-note">
+              También podés llamarnos al <a href="tel:+541133101085">011 3310-1085</a>.
+            </p>
+          </div>
+          <form className="quote-form">
+            <label>Empresa<input name="empresa" placeholder="Nombre de tu empresa" /></label>
+            <label>Pieza / material<input name="pieza" placeholder="Ej: Válvula de latón 60/40" /></label>
+            <label>Cantidad<input name="cantidad" placeholder="Ej: 200 unidades" /></label>
+            <label>Contacto<input name="contacto" placeholder="Teléfono, WhatsApp o email" /></label>
+            <button className="btn btn-primary" type="submit">Enviar consulta</button>
+          </form>
+        </div>
+      </section>
+
+      <footer className="site-footer">
         <div className="container footer-grid">
           <div>
             <a href="#inicio" className="brand footer-brand" aria-label="Ir al inicio">
-              <span className="brand-mark">MI</span>
-              <span className="brand-text">Metal Industrial</span>
+              <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} />
+              <span className="brand-text">Packlin S.A.</span>
             </a>
             <p>
-              Fabricación industrial con foco en calidad, precisión y atención
-              comercial cercana.
+              Forjado y fundición de piezas de latón a medida, desde 2006.
             </p>
           </div>
 
           <div>
             <h3>Contacto</h3>
             <ul className="contact-list">
-              <li>Paulo VI 669, Villa Gdor. Gálvez, Santa Fe</li>
               <li>
-                <a href="tel:+543413819726">+54 341 381-9726</a>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Leonardo+Euler+2435%2C+B1613+Los+Polvorines%2C+Provincia+de+Buenos+Aires"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Leonardo Euler 2435, B1613 Los Polvorines, Provincia de Buenos Aires
+                </a>
               </li>
-              <li>
-                <a href="mailto:info@metalindustrial.com.ar">info@metalindustrial.com.ar</a>
-              </li>
-              <li>Lunes a viernes · 7:00 a 16:00 hs</li>
+              <li><a href="tel:+541133101085">011 3310-1085</a></li>
+              <li>Atención directa y transporte propio</li>
             </ul>
           </div>
 
           <div>
             <h3>Navegación</h3>
             <ul className="footer-links">
-              <li><a href="#empresa">Empresa</a></li>
-              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#empresa">Nosotros</a></li>
+              <li><a href="#proceso">Cómo trabajamos</a></li>
               <li><a href="#productos">Productos</a></li>
+              <li><a href="#clientes">Clientes</a></li>
               <li><a href="#contacto">Contacto</a></li>
             </ul>
           </div>
         </div>
 
         <div className="container footer-bottom">
-          <p>© 2026 Metal Industrial. Todos los derechos reservados.</p>
+          <p>© 2026 Packlin S.A. Todos los derechos reservados.</p>
         </div>
       </footer>
     </main>

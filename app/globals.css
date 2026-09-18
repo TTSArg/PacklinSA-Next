@@ -119,6 +119,14 @@ p {
   color: var(--primary-strong);
 }
 
+.brand-logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
 .brand-mark {
   display: inline-grid;
   place-items: center;
@@ -280,6 +288,41 @@ p {
   color: var(--muted);
 }
 
+.trustbar {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.trustbar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.8rem 1.5rem;
+  padding: 1.15rem 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.history-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.history-list article {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+.history-list strong {
+  color: var(--primary-strong);
+}
+
+.history-list p {
+  margin: 0.25rem 0 0;
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -354,6 +397,34 @@ p {
 
 .product-body {
   padding: 1.25rem 1.2rem 1.5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.product-list .tag {
+  margin: 0;
+  background: rgba(242, 139, 45, 0.12);
+  color: var(--primary);
+}
+
+.callout {
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--accent);
+  background: var(--panel);
+  border-radius: 0 12px 12px 0;
+}
+
+.callout strong {
+  color: var(--primary-strong);
+}
+
+.callout p {
+  margin: 0.35rem 0 0;
 }
 
 .tag {
@@ -435,6 +506,82 @@ p {
   margin-top: 0.8rem;
 }
 
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.clients-grid a,
+.clients-grid span {
+  display: grid;
+  min-height: 4rem;
+  place-items: center;
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.clients-grid a:hover {
+  border-color: var(--accent);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.quote-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.quote-note {
+  margin-top: 1.5rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.quote-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.quote-form label {
+  display: grid;
+  gap: 0.4rem;
+  color: var(--primary-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.quote-form label:nth-child(1),
+.quote-form label:nth-child(4),
+.quote-form button {
+  grid-column: 1 / -1;
+}
+
+.quote-form input {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
 .site-footer {
   background: var(--primary-strong);
   color: rgba(255,255,255,0.8);
@@ -479,7 +626,8 @@ p {
   .four-grid,
   .timeline,
   .product-grid,
-  .footer-grid {
+  .footer-grid,
+  .quote-layout {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -499,7 +647,8 @@ p {
   .three-grid,
   .four-grid,
   .product-grid,
-  .timeline {
+  .timeline,
+  .quote-form {
     grid-template-columns: 1fr;
   }
 

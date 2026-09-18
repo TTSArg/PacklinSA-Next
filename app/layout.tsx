@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import logoPacklin from "./logoPacklin.jpg";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,19 +15,24 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ejemplo.com"),
-  title: "Metal Industrial | Forjado, estampado y mecanizado",
+  title: "Packlin | Forjado y fundición de piezas de latón",
   description:
-    "Fabricación industrial de piezas metálicas para sectores automotriz, transporte, agro y petrolero. Consultá soluciones a medida para tu industria.",
+    "Fabricación de piezas de latón a medida para empresas industriales argentinas, con matrices exclusivas, control de calidad y entregas ágiles.",
   keywords: [
     "forjado",
-    "estampado",
-    "mecanizado",
-    "piezas metálicas",
-    "industria",
+    "fundición de latón",
+    "forjado de latón",
+    "piezas de latón",
+    "Packlin",
     "fabricación industrial",
   ],
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: logoPacklin.src,
+    shortcut: logoPacklin.src,
+    apple: logoPacklin.src,
   },
 };
 
