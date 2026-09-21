@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoPacklin from "./logoPacklin.jpg";
+import logoPacklin from "./logoPacklin.png";
 
 const stats = [
   { value: "20", label: "Años en la industria" },
@@ -58,7 +58,9 @@ export default function Home() {
       <header className="site-header">
         <div className="container nav-wrap">
           <a href="#inicio" className="brand" aria-label="Ir al inicio">
-            <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} priority />
+            <span className="brand-logo-shell">
+              <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} priority />
+            </span>
             <span className="brand-text">Packlin</span>
           </a>
 
@@ -105,8 +107,8 @@ export default function Home() {
 
           <div className="hero-media" aria-label="Imagen de fábrica">
             <img
-              src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80"
-              alt="Operarios y maquinaria en planta industrial de fabricación metálica"
+              src="/1.jpg"
+              alt="Packlin producción y piezas de latón"
             />
             <div className="hero-card">
               <strong>Packlin en números</strong>
@@ -306,7 +308,9 @@ export default function Home() {
         <div className="container footer-grid">
           <div>
             <a href="#inicio" className="brand footer-brand" aria-label="Ir al inicio">
-              <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} />
+              <span className="brand-logo-shell">
+                <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} />
+              </span>
               <span className="brand-text">Packlin S.A.</span>
             </a>
             <p>

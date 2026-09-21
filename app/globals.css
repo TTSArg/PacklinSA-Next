@@ -119,12 +119,25 @@ p {
   color: var(--primary-strong);
 }
 
-.brand-logo {
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  object-fit: cover;
+.brand-logo-shell {
+  display: inline-grid;
+  place-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 999px;
   overflow: hidden;
+  background: linear-gradient(135deg, var(--primary), #2d5d8b);
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 8px 18px rgba(13, 31, 53, 0.18);
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  mix-blend-mode: normal;
+  opacity: 1;
 }
 
 .brand-mark {
@@ -139,7 +152,7 @@ p {
 }
 
 .brand-text {
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .main-nav {

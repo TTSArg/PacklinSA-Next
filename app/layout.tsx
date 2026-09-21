@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import logoPacklin from "./logoPacklin.jpg";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,10 +29,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: logoPacklin.src,
-    shortcut: logoPacklin.src,
-    apple: logoPacklin.src,
+    icon: "/favicon_io/favicon.ico",
+    shortcut: "/favicon_io/favicon.ico",
+    apple: "/favicon_io/apple-touch-icon.png",
   },
+  manifest: "/favicon_io/site.webmanifest",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
