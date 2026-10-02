@@ -1,10 +1,8 @@
 import Image from "next/image";
-import logoPacklin from "./logoPacklin.png";
 
 const stats = [
   { value: "20", label: "Años en la industria" },
   { value: "27", label: "Empresas activas" },
-  { value: "9", label: "Personas en el equipo" },
   { value: "~1 sem.", label: "Plazo de entrega estándar" },
 ];
 
@@ -28,7 +26,7 @@ const history = [
   ["2006 - Fundación", "José Luis Ramírez inicia Packlin S.A."],
   ["De inquilinos a dueños", "Pasar a ser propietarios del galpón donde operamos."],
   ["Pandemia 2020", "Parte de la cadena de oxigenoterapia cuando el circuito habitual no daba respuesta."],
-  ["Hoy", "20 años de trayectoria, 27 empresas activas y un equipo de 9 personas."],
+  ["Hoy", "20 años de trayectoria y 27 empresas activas."],
 ];
 
 const clients = [
@@ -59,7 +57,7 @@ export default function Home() {
         <div className="container nav-wrap">
           <a href="#inicio" className="brand" aria-label="Ir al inicio">
             <span className="brand-logo-shell">
-              <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} priority />
+              <Image className="brand-logo" src="/logo.png" alt="Packlin" width={44} height={44} priority />
             </span>
             <span className="brand-text">Packlin</span>
           </a>
@@ -82,7 +80,7 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Forjado y fundición de piezas de latón · Desde 2006</p>
-            <h1>Precisión industrial, con trato de empresa familiar.</h1>
+            <h1>Precisión industrial, soluciones a medida.</h1>
             <p className="lead">
               Fabricamos piezas de latón a medida para empresas industriales argentinas,
               con matrices exclusivas por cliente, control de calidad en cada etapa y
@@ -146,8 +144,7 @@ export default function Home() {
           </div>
           <div>
             <p>
-              Packlin nace en 2006, fundada por José Luis Ramírez. Hoy somos nueve
-              personas -siete en planta y dos en administración- y las decisiones
+              Packlin nace en 2006, fundada por José Luis Ramírez. Las decisiones
               siguen tomándolas quienes atienden cada pedido.
             </p>
             <p>
@@ -309,7 +306,7 @@ export default function Home() {
           <div>
             <a href="#inicio" className="brand footer-brand" aria-label="Ir al inicio">
               <span className="brand-logo-shell">
-                <Image className="brand-logo" src={logoPacklin} alt="Packlin" width={44} height={44} />
+                <Image className="brand-logo" src="/logo.png" alt="Packlin" width={44} height={44} />
               </span>
               <span className="brand-text">Packlin S.A.</span>
             </a>
