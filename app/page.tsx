@@ -7,19 +7,53 @@ const stats = [
 ];
 
 const services = [
-  { title: "Matriz exclusiva por cliente", text: "Cada cliente tiene su propia matriz. No hay producción genérica ni moldes compartidos." },
-  { title: "Red productiva propia", text: "20 años de vínculos con matriceros y proveedores de materia prima, listos cuando se necesitan." },
-  { title: "Flexibilidad de materia prima", text: "Si preferís proveer vos mismo el latón, te lo facilitamos. La calidad queda garantizada desde el origen." },
-  { title: "Capacidad de respuesta", text: "Producción sostenida incluso en contextos críticos: pandemia, subas o escasez de materia prima." },
+  {
+    title: "Matriz exclusiva por cliente",
+    text: "Cada cliente tiene su propia matriz. No hay producción genérica ni moldes compartidos.",
+    icon: <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" /><path d="M12 12 4 7.5M12 12l8-4.5M12 12v9" /></svg>,
+  },
+  {
+    title: "Red productiva propia",
+    text: "20 años de vínculos con matriceros y proveedores de materia prima, listos cuando se necesitan.",
+    icon: <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="5" cy="6" r="2" /><circle cx="19" cy="6" r="2" /><circle cx="12" cy="18" r="2" /><path d="M7 6h10M6.5 7.5l4 8M17.5 7.5l-4 8" /></svg>,
+  },
+  {
+    title: "Flexibilidad de materia prima",
+    text: "Si preferís proveer vos mismo el latón, te lo facilitamos. La calidad queda garantizada desde el origen.",
+    icon: <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="m4 9 2-4h12l2 4-2 10H6L4 9Z" /><path d="M4 9h16M8 9l1 10M16 9l-1 10" /></svg>,
+  },
+  {
+    title: "Capacidad de respuesta",
+    text: "Producción sostenida incluso en contextos críticos: pandemia, subas o escasez de materia prima.",
+    icon: <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 5 14h6l-1 8 9-13h-6l1-7Z" /></svg>,
+  },
 ];
 
 const sectors = [
-  "Válvulas y reguladores",
-  "GNC",
-  "Matafuegos",
-  "Bombas",
-  "Cerrajería",
-  "Sanitarios",
+  {
+    title: "Válvulas y reguladores",
+    text: "Piezas de latón fundido con buena resistencia a la corrosión y roscas estables, para un cierre hermético y un funcionamiento confiable en el tiempo.",
+  },
+  {
+    title: "GNC",
+    text: "Conexiones y conjuntos de gas en latón, con roscas precisas y buena estanqueidad. Es un material de baja generación de chispas por fricción.",
+  },
+  {
+    title: "Matafuegos",
+    text: "Componentes para válvulas y conexiones que mantienen el ajuste y el sellado, con resistencia a la corrosión para responder cuando se los necesita.",
+  },
+  {
+    title: "Bombas",
+    text: "Cuerpos y conexiones de latón con buena resistencia al desgaste y a la corrosión por agua, que conservan su geometría en uso continuo.",
+  },
+  {
+    title: "Cerrajería",
+    text: "El latón combina baja fricción, resistencia al desgaste y buena terminación superficial, para herrajes de accionamiento suave y larga vida útil.",
+  },
+  {
+    title: "Sanitarios",
+    text: "Piezas para conexiones y mecanismos con resistencia a la corrosión por agua, estanqueidad en las uniones y terminaciones cuidadas.",
+  },
 ];
 
 const history = [
@@ -79,23 +113,19 @@ export default function Home() {
       <section id="inicio" className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Forjado y fundición de piezas de latón /p>
+            <p className="eyebrow">Forjado y fundición de piezas de latón</p>
             <h1>Precisión industrial, soluciones a medida.</h1>
             <p className="lead">
               Fabricamos piezas de latón a medida para la industria en Argentina,
               somos parte de la cadena de valor y cuidamos detalladamente la calidad en cada etapa
             </p>
-            
+          </div>
 
           <div className="hero-media" aria-label="Imagen de fábrica">
             <img
               src="/1.jpg"
               alt="Packlin producción y piezas de latón"
             />
-            <div className="hero-card">
-              <strong>Packlin en números</strong>
-              <span>Una empresa familiar con oficio de planta y continuidad probada.</span>
-            </div>
           </div>
         </div>
       </section>
@@ -113,10 +143,35 @@ export default function Home() {
 
       <div className="trustbar">
         <div className="container trustbar-grid">
-          <span>Matriz exclusiva por cliente</span>
-          <span>Transporte propio, sin tercerizar</span>
-          <span>Atención directa de los dueños</span>
-          <span>Continuidad probada en contextos críticos</span>
+          <span className="trust-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <path d="M8 8h8M8 12h8M8 16h4" />
+            </svg>
+            <span>Matriz exclusiva por cliente</span>
+          </span>
+          <span className="trust-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 7h11v11H3zM14 10h4l3 3v5h-7z" />
+              <circle cx="7.5" cy="18" r="1.5" />
+              <circle cx="17.5" cy="18" r="1.5" />
+            </svg>
+            <span>Transporte propio, sin tercerizar</span>
+          </span>
+          <span className="trust-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="9" cy="8" r="3" />
+              <path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 5.5a3 3 0 0 1 0 5.8M17 14a5 5 0 0 1 3.5 4.8" />
+            </svg>
+            <span>Atención directa de los dueños</span>
+          </span>
+          <span className="trust-item">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3 20 6v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+            <span>Continuidad probada en contextos críticos</span>
+          </span>
         </div>
       </div>
 
@@ -134,7 +189,7 @@ export default function Home() {
 
               Es estos años hemos construido una red de técnicos y proveedores de confianza,
               con la que podemos garantizar soporte, calidad y cercanía
-              /p>
+            </p>
             <p>
               Asumimos el constante desafío de mejorar y sostenernos en el mercado,
               con el proposito de que esta empresa siga generando confianza 
@@ -168,7 +223,7 @@ export default function Home() {
           <div className="cards-grid four-grid">
             {services.map((service) => (
               <article key={service.title} className="card feature-card">
-                <div className="icon">{service.title.charAt(0)}</div>
+                <div className="feature-icon">{service.icon}</div>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
               </article>
@@ -179,16 +234,16 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <div className="section-heado ting">
+          <div className="section-heading">
             <p className="eyebrow">Una fábrica, muchas industrias</p>
             <h2>Cada rubro nos desafía distinto, y esa experiencia nos hace más versátiles e innovadores</h2>
           </div>
 
           <div className="cards-grid four-grid">
             {sectors.map((sector) => (
-              <article key={sector} className="card sector-card">
-                <h3>{sector}</h3>
-                <p>Fabricación a medida con control directo en cada pedido.</p>
+              <article key={sector.title} className="card sector-card">
+                <h3>{sector.title}</h3>
+                <p>{sector.text}</p>
               </article>
             ))}
           </div>
@@ -215,7 +270,7 @@ export default function Home() {
       <section id="proceso" className="section process">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Proceso de trabajo</p>
+            <p className="eyebrow">Cómo trabajamos</p>
             <h2>Un proceso de planta, con control en cada etapa.</h2>
           </div>
 
