@@ -3,7 +3,7 @@ import Image from "next/image";
 const stats = [
   { value: "20", label: "Años en la industria" },
   { value: "27", label: "Empresas activas" },
-  { value: "~1 sem.", label: "Plazo de entrega estándar" },
+  { value: "Tu pedido en 1 semana.", label: "Plazo de entrega estándar" },
 ];
 
 const services = [
@@ -79,29 +79,13 @@ export default function Home() {
       <section id="inicio" className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Forjado y fundición de piezas de latón · Desde 2006</p>
+            <p className="eyebrow">Forjado y fundición de piezas de latón /p>
             <h1>Precisión industrial, soluciones a medida.</h1>
             <p className="lead">
-              Fabricamos piezas de latón a medida para empresas industriales argentinas,
-              con matrices exclusivas por cliente, control de calidad en cada etapa y
-              entregas en aproximadamente una semana.
+              Fabricamos piezas de latón a medida para la industria en Argentina,
+              somos parte de la cadena de valor y cuidamos detalladamente la calidad en cada etapa
             </p>
-
-            <div className="cta-row">
-              <a className="btn btn-primary" href="#contacto">
-                Solicitar cotización
-              </a>
-              <a className="btn btn-secondary" href="#productos">
-                Ver qué fabricamos
-              </a>
-            </div>
-
-            <ul className="hero-badges" aria-label="Atributos clave">
-              <li>Matriz exclusiva por cliente</li>
-              <li>Transporte propio</li>
-              <li>Atención directa de los dueños</li>
-            </ul>
-          </div>
+            
 
           <div className="hero-media" aria-label="Imagen de fábrica">
             <img
@@ -140,17 +124,21 @@ export default function Home() {
         <div className="container two-col">
           <div>
             <p className="eyebrow dark">Quiénes somos</p>
-            <h2>Una empresa familiar con oficio de planta.</h2>
+            <h2>Una empresa comprometida con la calidad.</h2>
           </div>
           <div>
             <p>
-              Packlin nace en 2006, fundada por José Luis Ramírez. Las decisiones
-              siguen tomándolas quienes atienden cada pedido.
-            </p>
+              Packlin nace en 2006, fundada por José Luis Ramírez. 
+              Desde entonces se ha conformado un equipo que en cada pedido
+              aporta a la cadena de valor de la empresa y de los clientes.
+
+              Es estos años hemos construido una red de técnicos y proveedores de confianza,
+              con la que podemos garantizar soporte, calidad y cercanía
+              /p>
             <p>
-              Esa cercanía es también nuestra forma de trabajar: seguimos invirtiendo
-              para mejorar y sostenernos en el mercado, con la meta de que la empresa
-              continúe con las próximas generaciones.
+              Asumimos el constante desafío de mejorar y sostenernos en el mercado,
+              con el proposito de que esta empresa siga generando confianza 
+              en las próximas generaciones
             </p>
           </div>
         </div>
@@ -174,7 +162,7 @@ export default function Home() {
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">Por qué trabajar con Packlin</p>
-            <h2>Cuatro razones que dan tranquilidad.</h2>
+            <h2>Cuatro razones para elegirnos.</h2>
           </div>
 
           <div className="cards-grid four-grid">
@@ -191,9 +179,9 @@ export default function Home() {
 
       <section className="section">
         <div className="container">
-          <div className="section-heading">
-            <p className="eyebrow">Cómo trabajamos</p>
-            <h2>Un proceso de planta, con control en cada etapa.</h2>
+          <div className="section-heado ting">
+            <p className="eyebrow">Una fábrica, muchas industrias</p>
+            <h2>Cada rubro nos desafía distinto, y esa experiencia nos hace más versátiles e innovadores</h2>
           </div>
 
           <div className="cards-grid four-grid">
@@ -250,29 +238,18 @@ export default function Home() {
             <article>
               <span>04</span>
               <h3>Entrega</h3>
-              <p>Con transporte propio, en aproximadamente una semana.</p>
+              <p>Con transporte propio, acercamos tu pedido.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section className="cta-banner">
-        <div className="container cta-inner">
-          <div>
-            <p className="eyebrow dark">Clientes</p>
-            <h2>27 empresas industriales trabajan hoy con nosotros.</h2>
-          </div>
-          <a className="btn btn-primary" href="#contacto">
-            Conocer clientes
-          </a>
-        </div>
-      </section>
-
+     
       <section id="clientes" className="section faq-section" aria-labelledby="faq-title">
         <div className="container">
           <div className="section-heading">
             <p className="eyebrow">Quiénes confían en Packlin</p>
-            <h2 id="faq-title">La mayoría llegó por recomendación.</h2>
+            <h2 id="faq-title">Años de experiencia se traducen en diversidad, adaptabilidad e innovación </h2>
           </div>
 
           <div className="clients-grid">
@@ -286,9 +263,9 @@ export default function Home() {
           <div>
             <p className="eyebrow">Cotización</p>
             <h2 id="quote-title">Conversemos sobre tu próximo pedido.</h2>
-            <p>Contanos qué pieza necesitás, en qué cantidad y para cuándo. Te respondemos con una cotización clara, sin vueltas.</p>
+            <p>Contanos qué pieza necesitás, en qué cantidad y para cuándo. Atención personalizada.</p>
             <p className="quote-note">
-              También podés llamarnos al <a href="tel:+541133101085">011 3310-1085</a>.
+              Podés llamarnos al <a href="tel:+541133101085">011 3310-1085</a>.
             </p>
           </div>
           <form className="quote-form">
@@ -311,7 +288,7 @@ export default function Home() {
               <span className="brand-text">Packlin S.A.</span>
             </a>
             <p>
-              Forjado y fundición de piezas de latón a medida, desde 2006.
+              Forjado y fundición de piezas de latón a medida desde 2006. Parte de la cadena de valor de la industria, con atención directa y transporte propio.
             </p>
           </div>
 
@@ -328,8 +305,7 @@ export default function Home() {
                 </a>
               </li>
               <li><a href="tel:+541133101085">011 3310-1085</a></li>
-              <li>Atención directa y transporte propio</li>
-            </ul>
+              </ul>
           </div>
 
           <div>
