@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroVideo from "./hero-video";
+import PhotoCarousel from "./photo-carousel";
 import QuoteForm from "./quote-form";
 import WhatsAppIcon from "./whatsapp-icon";
 
@@ -79,7 +80,7 @@ const clients = [
   ["Yaltres S.R.L.", "https://www.yaltres.com/"], ["Grupo Tornado S.A.", "https://intor.com.ar/"],
   ["Herrajes Galo", "https://www.herrajesgalo.com.ar/"], ["Alcarduplex S.A.", "https://alcarduplex.com/"],
   ["Metal Mec del Oeste", "https://metalmecdeloeste.com.ar/"], ["Talleres Paz", "https://www.tallerespaz.com.ar/"],
-  ["Varela Peric S.A.", "https://www.instagram.com/varelaperic/"], ["Garcia Conde", ""], ["Paul", ""],
+  ["Varela Peric S.A.", "https://www.instagram.com/varelaperic/"], ["Garcia Conde", ""],
 ];
 
 const products = [
@@ -310,6 +311,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <PhotoCarousel />
 
       <section id="contacto" className="section quote-section" aria-labelledby="quote-title">
         <div className="container quote-layout">
