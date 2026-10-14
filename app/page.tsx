@@ -1,9 +1,12 @@
 import Image from "next/image";
+import HeroVideo from "./hero-video";
+import QuoteForm from "./quote-form";
+import WhatsAppIcon from "./whatsapp-icon";
 
 const stats = [
   { value: "20", label: "Años en la industria" },
   { value: "27", label: "Empresas activas" },
-  { value: "Tu pedido en 1 semana.", label: "Plazo de entrega estándar" },
+  { value: "7", label: "Días de entrega estándar" },
 ];
 
 const services = [
@@ -105,12 +108,14 @@ export default function Home() {
           </nav>
 
           <a className="btn btn-primary" href="#contacto">
-            Solicitar cotización
+            <WhatsAppIcon />
+            <span>Solicitar cotización</span>
           </a>
         </div>
       </header>
 
       <section id="inicio" className="hero">
+        <HeroVideo />
         <div className="container hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Forjado y fundición de piezas de latón</p>
@@ -120,24 +125,6 @@ export default function Home() {
               somos parte de la cadena de valor y cuidamos detalladamente la calidad en cada etapa
             </p>
           </div>
-
-          <div className="hero-media" aria-label="Imagen de fábrica">
-            <img
-              src="/1.jpg"
-              alt="Packlin producción y piezas de latón"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="stats" aria-label="Estadísticas de la empresa">
-        <div className="container stats-grid">
-          {stats.map((item) => (
-            <article key={item.label}>
-              <strong>{item.value}</strong>
-              <span>{item.label}</span>
-            </article>
-          ))}
         </div>
       </section>
 
@@ -174,6 +161,17 @@ export default function Home() {
           </span>
         </div>
       </div>
+
+      <section className="stats" aria-label="Estadísticas de la empresa">
+        <div className="container stats-grid">
+          {stats.map((item) => (
+            <article key={item.label}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <section id="empresa" className="section intro">
         <div className="container two-col">
@@ -322,14 +320,11 @@ export default function Home() {
             <p className="quote-note">
               Podés llamarnos al <a href="tel:+541133101085">011 3310-1085</a>.
             </p>
+            <p className="quote-note">
+              Escribinos a <a href="mailto:packlinsa@gmail.com">packlinsa@gmail.com</a>.
+            </p>
           </div>
-          <form className="quote-form">
-            <label>Empresa<input name="empresa" placeholder="Nombre de tu empresa" /></label>
-            <label>Pieza / material<input name="pieza" placeholder="Ej: Válvula de latón 60/40" /></label>
-            <label>Cantidad<input name="cantidad" placeholder="Ej: 200 unidades" /></label>
-            <label>Contacto<input name="contacto" placeholder="Teléfono, WhatsApp o email" /></label>
-            <button className="btn btn-primary" type="submit">Enviar consulta</button>
-          </form>
+          <QuoteForm />
         </div>
       </section>
 
@@ -360,7 +355,8 @@ export default function Home() {
                 </a>
               </li>
               <li><a href="tel:+541133101085">011 3310-1085</a></li>
-              </ul>
+              <li><a href="mailto:packlinsa@gmail.com">packlinsa@gmail.com</a></li>
+            </ul>
           </div>
 
           <div>
