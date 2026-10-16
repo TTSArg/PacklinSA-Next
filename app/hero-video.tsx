@@ -24,7 +24,6 @@ export default function HeroVideo() {
       loop
       playsInline
       preload="auto"
-      poster="/1.jpg"
     >
       <source src="/video_horizontal.mp4" type="video/mp4" />
     </video>

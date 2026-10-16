@@ -12,6 +12,7 @@ const photos = [
   "LUC_9936.jpg",
   "LUC_9992.jpg",
   "LUC_9839.jpg",
+  "LUC_9796.jpg",
   "LUC_9860.jpg",
   "LUC_9866.jpg",
   "LUC_9891.jpg",
