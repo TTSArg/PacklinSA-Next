@@ -21,14 +21,6 @@ export const metadata: Metadata = {
   },
   description:
     "Fabricación de piezas de latón a medida para empresas industriales argentinas, con matrices exclusivas, control de calidad y entregas ágiles.",
-  keywords: [
-    "forjado",
-    "fundición de latón",
-    "forjado de latón",
-    "piezas de latón",
-    "Packlin",
-    "fabricación industrial",
-  ],
   alternates: {
     canonical: "/",
   },
@@ -59,25 +51,57 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationJsonLd = {
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Packlin S.A.",
-  url: siteUrl.toString(),
-  logo: new URL("/logo.png", siteUrl).toString(),
-  description:
-    "Fabricación de piezas de latón a medida para empresas industriales argentinas.",
-  foundingDate: "2006",
-  telephone: "+54-11-3310-1085",
-  email: "packlinsa@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Leonardo Euler 2435",
-    addressLocality: "Los Polvorines",
-    addressRegion: "Buenos Aires",
-    postalCode: "B1613",
-    addressCountry: "AR",
-  },
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": new URL("/#empresa", siteUrl).toString(),
+      name: "Packlin S.A.",
+      url: siteUrl.toString(),
+      logo: new URL("/logo.png", siteUrl).toString(),
+      description:
+        "Fabricación de piezas de latón a medida para empresas industriales argentinas.",
+      foundingDate: "2006",
+      telephone: "+54-11-3310-1085",
+      email: "packlinsa@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Leonardo Euler 2435",
+        addressLocality: "Los Polvorines",
+        addressRegion: "Buenos Aires",
+        postalCode: "B1613",
+        addressCountry: "AR",
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Argentina",
+      },
+    },
+    {
+      "@type": "Service",
+      name: "Fabricación de piezas de latón a medida",
+      serviceType: "Forjado y fundición de piezas de latón",
+      provider: {
+        "@id": new URL("/#empresa", siteUrl).toString(),
+      },
+      areaServed: {
+        "@type": "Country",
+        name: "Argentina",
+      },
+    },
+    {
+      "@type": "VideoObject",
+      name: "Proceso de fabricación de piezas de latón en Packlin",
+      description:
+        "Video del proceso de colada de latón en la planta de Packlin, fabricante de piezas industriales a medida.",
+      thumbnailUrl: new URL("/Fotos/LUC_9954.jpg", siteUrl).toString(),
+      contentUrl: new URL("/video_horizontal.mp4", siteUrl).toString(),
+      publisher: {
+        "@id": new URL("/#empresa", siteUrl).toString(),
+      },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -90,7 +114,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         {children}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </body>
     </html>

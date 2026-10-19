@@ -186,13 +186,13 @@ export default function Home() {
               Desde entonces se ha conformado un equipo que en cada pedido
               aporta a la cadena de valor de la empresa y de los clientes.
 
-              Es estos años hemos construido una red de técnicos y proveedores de confianza,
-              con la que podemos garantizar soporte, calidad y cercanía
+              En estos años hemos construido una red de técnicos y proveedores de confianza,
+              con la que podemos garantizar soporte, calidad y cercanía.
             </p>
             <p>
               Asumimos el constante desafío de mejorar y sostenernos en el mercado,
-              con el proposito de que esta empresa siga generando confianza 
-              en las próximas generaciones
+              con el propósito de que esta empresa siga generando confianza
+              en las próximas generaciones.
             </p>
           </div>
         </div>
@@ -258,6 +258,10 @@ export default function Home() {
 
           <div className="product-list">
             {products.map((product) => <span key={product} className="tag">{product}</span>)}
+          </div>
+          <div className="product-list product-detail-links">
+            <a className="btn btn-secondary" href="/productos/valvulas-de-laton">Válvulas de latón</a>
+            <a className="btn btn-secondary" href="/gnc">Piezas de latón para GNC</a>
           </div>
           <div className="callout">
             <strong>Estamos ampliando nuestra cartera.</strong>

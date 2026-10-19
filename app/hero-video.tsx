@@ -19,11 +19,13 @@ export default function HeroVideo() {
     <video
       ref={videoRef}
       className="hero-video"
-      aria-hidden="true"
+      role="img"
+      aria-label="Video del proceso de colada de latón en la planta de Packlin"
       muted
       loop
       playsInline
-      preload="auto"
+      preload="metadata"
+      poster="/Fotos/LUC_9954.jpg"
     >
       <source src="/video_horizontal.mp4" type="video/mp4" />
     </video>

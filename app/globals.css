@@ -454,6 +454,10 @@ p {
   gap: 0.8rem;
 }
 
+.product-detail-links {
+  margin-top: 1.25rem;
+}
+
 .product-list .tag {
   margin: 0;
   background: rgba(242, 199, 68, 0.1);
