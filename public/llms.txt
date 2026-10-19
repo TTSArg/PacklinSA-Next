@@ -1,0 +1,21 @@
+# Packlin S.A.
+
+> Fabricante argentino de piezas de latón a medida, por fundición y forjado, para empresas industriales. Fundada en 2006. Matriz exclusiva por cliente, control de calidad por lote y transporte propio.
+
+Ubicación: Leonardo Euler 2435, Los Polvorines, Buenos Aires, Argentina.
+Teléfono: 011 3310-1085
+Email: packlinsa@gmail.com
+
+## Páginas principales
+
+- [Inicio](https://packlinsa.com.ar/): Presentación de la empresa, proceso de trabajo, rubros atendidos y clientes.
+- [Piezas de latón para válvulas](https://packlinsa.com.ar/productos/valvulas-de-laton): Componentes de latón a medida para válvulas y reguladores.
+- [Piezas de latón para GNC](https://packlinsa.com.ar/gnc): Conexiones y conjuntos de gas en latón según planos y especificaciones.
+
+## Rubros que atendemos
+
+Válvulas y reguladores, GNC, matafuegos, bombas, cerrajería y sanitarios.
+
+## Cómo pedir una cotización
+
+Enviar tipo de pieza, medidas, material y cantidad estimada por el formulario del sitio, por teléfono o por email.

@@ -6,6 +6,28 @@ export const metadata: Metadata = {
   title: "Válvulas y piezas de latón a medida",
   description:
     "Packlin fabrica piezas y componentes de latón a medida para válvulas y reguladores, con matrices exclusivas y control por lote.",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: new URL("/productos/valvulas-de-laton", siteUrl),
+    siteName: "Packlin S.A.",
+    title: "Piezas de latón para válvulas | Packlin S.A.",
+    description:
+      "Componentes de latón a medida para válvulas y reguladores, con matrices exclusivas y control de calidad por lote.",
+    images: [
+      {
+        url: "/Fotos/LUC_9773.jpg",
+        alt: "Lote de componentes metálicos fabricados en la planta de Packlin.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Piezas de latón para válvulas | Packlin S.A.",
+    description:
+      "Componentes de latón a medida para válvulas y reguladores, con matrices exclusivas y control de calidad por lote.",
+    images: ["/Fotos/LUC_9773.jpg"],
+  },
   alternates: {
     canonical: new URL("/productos/valvulas-de-laton", siteUrl),
   },

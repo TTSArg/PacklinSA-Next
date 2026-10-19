@@ -1,6 +1,7 @@
 "use client";
 
 import { type FormEvent } from "react";
+import { trackContactClick } from "./contact-tracking";
 import WhatsAppIcon from "./whatsapp-icon";
 
 const whatsappNumber = "541133101085";
@@ -24,6 +25,7 @@ export default function QuoteForm() {
     const whatsappUrl = new URL(`https://wa.me/${whatsappNumber}`);
     whatsappUrl.searchParams.set("text", message);
 
+    trackContactClick("whatsapp", "quote_form", whatsappUrl.toString());
     window.open(whatsappUrl.toString(), "_blank", "noopener,noreferrer");
   }
 

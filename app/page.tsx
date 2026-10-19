@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactAction from "./contact-action";
 import HeroVideo from "./hero-video";
 import PhotoCarousel from "./photo-carousel";
 import QuoteForm from "./quote-form";
@@ -325,10 +326,10 @@ export default function Home() {
             <h2 id="quote-title">Conversemos sobre tu próximo pedido.</h2>
             <p>Contanos qué pieza necesitás, en qué cantidad y para cuándo. Atención personalizada.</p>
             <p className="quote-note">
-              Podés llamarnos al <a href="tel:+541133101085">011 3310-1085</a>.
+              Podés llamarnos al <ContactAction href="tel:+541133101085" contactMethod="phone" placement="contact_section">011 3310-1085</ContactAction>.
             </p>
             <p className="quote-note">
-              Escribinos a <a href="mailto:packlinsa@gmail.com">packlinsa@gmail.com</a>.
+              Escribinos a <ContactAction href="mailto:packlinsa@gmail.com" contactMethod="email" placement="contact_section">packlinsa@gmail.com</ContactAction>.
             </p>
           </div>
           <QuoteForm />
@@ -361,8 +362,8 @@ export default function Home() {
                   Leonardo Euler 2435, B1613 Los Polvorines, Provincia de Buenos Aires
                 </a>
               </li>
-              <li><a href="tel:+541133101085">011 3310-1085</a></li>
-              <li><a href="mailto:packlinsa@gmail.com">packlinsa@gmail.com</a></li>
+              <li><ContactAction href="tel:+541133101085" contactMethod="phone" placement="footer">011 3310-1085</ContactAction></li>
+              <li><ContactAction href="mailto:packlinsa@gmail.com" contactMethod="email" placement="footer">packlinsa@gmail.com</ContactAction></li>
             </ul>
           </div>
 
