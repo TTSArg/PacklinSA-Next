@@ -6,7 +6,9 @@ import ContactAction from "./contact-action";
 import WhatsAppIcon from "./whatsapp-icon";
 import "./globals.css";
 
-const googleTagManagerId = process.env.NEXT_PUBLIC_GTM_ID;
+const googleTagManagerId =
+  process.env.NEXT_PUBLIC_GTM_ID ??
+  (process.env.VERCEL_ENV === "production" ? "GTM-M3R6GJR6" : undefined);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -123,7 +125,25 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        {googleTagManagerId ? (
+          <Script id="google-tag-manager" strategy="beforeInteractive">
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${googleTagManagerId}');`}
+          </Script>
+        ) : null}
+      </head>
       <body className="min-h-full flex flex-col">
+        {googleTagManagerId ? (
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
+              height="0"
+              width="0"
+              title="Google Tag Manager"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+        ) : null}
         {children}
         <ContactAction
           className="whatsapp-float"
@@ -137,22 +157,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           <WhatsAppIcon />
         </ContactAction>
-        {googleTagManagerId ? (
-          <>
-            <noscript>
-              <iframe
-                src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
-                height="0"
-                width="0"
-                title="Google Tag Manager"
-                style={{ display: "none", visibility: "hidden" }}
-              />
-            </noscript>
-            <Script id="google-tag-manager" strategy="afterInteractive">
-              {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${googleTagManagerId}');`}
-            </Script>
-          </>
-        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
